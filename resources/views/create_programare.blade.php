@@ -1,6 +1,6 @@
 <div class="row mb-3">
     <div class="col-md-6">
-        <label for="client_name" class="form-label">Client Name <span class="text-danger">*</span></label>
+        <label for="client_name" class="form-label">Numele Clientului <span class="text-danger">*</span></label>
         <div class="input-group">
                             <span class="input-group-text bg-light">
                                 <i class="fas fa-user text-muted"></i>
@@ -10,35 +10,35 @@
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        <small class="text-muted">Enter the full name of the client</small>
+        <small class="text-muted">Nume + Prenume</small>
     </div>
 
     <div class="col-md-6">
-        <label for="service" class="form-label">Service <span class="text-danger">*</span></label>
+        <label for="service" class="form-label">Serviciu <span class="text-danger">*</span></label>
         <div class="input-group">
                             <span class="input-group-text bg-light">
                                 <i class="fas fa-cut text-muted"></i>
                             </span>
             <select class="form-select @error('service') is-invalid @enderror" id="service" name="service" required  wire:model="reservation.service">
-                <option value="" selected disabled>Select a service</option>
-                <option value="Haircut" {{ old('service') == 'Haircut' ? 'selected' : '' }} data-price="25.00">Haircut - $25.00</option>
-                <option value="Beard Trim" {{ old('service') == 'Beard Trim' ? 'selected' : '' }} data-price="15.00">Beard Trim - $15.00</option>
-                <option value="Hair Coloring" {{ old('service') == 'Hair Coloring' ? 'selected' : '' }} data-price="50.00">Hair Coloring - $50.00</option>
-                <option value="Shave" {{ old('service') == 'Shave' ? 'selected' : '' }} data-price="20.00">Shave - $20.00</option>
-                <option value="Hair Styling" {{ old('service') == 'Hair Styling' ? 'selected' : '' }} data-price="35.00">Hair Styling - $35.00</option>
-                <option value="Full Service" {{ old('service') == 'Full Service' ? 'selected' : '' }} data-price="75.00">Full Service - $75.00</option>
+                <option value="" selected disabled>Selecteaza serviciu</option>
+                <option value="Haircut" {{ old('service') == 'Haircut' ? 'selected' : '' }} data-price="25.00">Tuns - 25.00 lei</option>
+                <option value="Beard Trim" {{ old('service') == 'Beard Trim' ? 'selected' : '' }} data-price="15.00">Barba - 15.00 lei</option>
+                <option value="Hair Coloring" {{ old('service') == 'Hair Coloring' ? 'selected' : '' }} data-price="50.00">Vopsit par - 50.00 lei</option>
+                <option value="Shave" {{ old('service') == 'Shave' ? 'selected' : '' }} data-price="20.00">Ras - $20.00</option>
+                <option value="Hair Styling" {{ old('service') == 'Hair Styling' ? 'selected' : '' }} data-price="35.00">Hair Styling - 35.00 lei</option>
+                <option value="Full Service" {{ old('service') == 'Full Service' ? 'selected' : '' }} data-price="75.00">Pachet - 75.00 lei</option>
             </select>
             @error('service')
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        <small class="text-muted">Select the service for this appointment</small>
+        <small class="text-muted">Selecteaza serviciul</small>
     </div>
 </div>
 
 <div class="row mb-3">
     <div class="col-md-6">
-        <label for="time" class="form-label">Appointment Date & Time <span class="text-danger">*</span></label>
+        <label for="time" class="form-label">Data si ora <span class="text-danger">*</span></label>
         <div class="input-group">
                             <span class="input-group-text bg-light">
                                 <i class="fas fa-calendar-alt text-muted"></i>
@@ -48,7 +48,7 @@
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        <small class="text-muted">Select the date and time for the appointment</small>
+        <small class="text-muted">Selecteaza data si ora</small>
     </div>
 
     <div class="col-md-6">
@@ -58,21 +58,21 @@
                                 <i class="fas fa-tag text-muted"></i>
                             </span>
             <select class="form-select @error('status') is-invalid @enderror" id="status" name="status" required wire:model="reservation.status">
-                <option value="pending" {{ old('status') == 'pending' ? 'selected' : '' }}>Pending</option>
-                <option value="confirmed" {{ old('status') == 'confirmed' ? 'selected' : '' }}>Confirmed</option>
-                <option value="cancelled" {{ old('status') == 'cancelled' ? 'selected' : '' }}>Cancelled</option>
+                <option value="pending" {{ old('status') == 'pending' ? 'selected' : '' }}>In asteptare</option>
+                <option value="confirmed" {{ old('status') == 'confirmed' ? 'selected' : '' }}>Confirmata</option>
+                <option value="cancelled" {{ old('status') == 'cancelled' ? 'selected' : '' }}>Anulata</option>
             </select>
             @error('status')
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        <small class="text-muted">Set the initial status of this reservation</small>
+        <small class="text-muted">Seteaza statusul initial al rezervarii</small>
     </div>
 </div>
 
 <div class="row mb-4">
     <div class="col-md-6">
-        <label for="price" class="form-label">Price <span class="text-danger">*</span></label>
+        <label for="price" class="form-label">Pret <span class="text-danger">*</span></label>
         <div class="input-group">
                             <span class="input-group-text bg-light">
                                 <i class="fas fa-dollar-sign text-muted"></i>
@@ -82,7 +82,7 @@
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-        <small class="text-muted">The price will be automatically set based on the selected service</small>
+
     </div>
 </div>
 

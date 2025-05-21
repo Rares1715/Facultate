@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-md-3">
                     <select class="form-select" id="status-filter"wire:model="status" wire:change="resetPagination()">
-                        <option value="">All Statuses</option>
+                        <option value="">Toate statusurile</option>
                         <option value="confirmed" {{ request()->get('status') == 'confirmed' ? 'selected' : '' }}>
                             <i class="fas fa-check-circle"></i> Confirmata
                         </option>
@@ -40,8 +40,8 @@
                 </div>
                 <div class="col-md-3">
                     <select class="form-select" id="sort-by" wire:model="sortBy" wire:change="resetPagination()">
-                        <option value="latest">Latest First</option>
-                        <option value="oldest">Oldest First</option>
+                        <option value="latest">Cele mai noi</option>
+                        <option value="oldest">Cele mai vechi</option>
                     </select>
                 </div>
 
@@ -85,7 +85,7 @@
                                 </small>
                             </td>
                             <td>
-                                <span class="fw-bold">${{ number_format($reservation->price, 2) }}</span>
+                                <span class="fw-bold">{{ number_format($reservation->price, 2, ',', '.') }} lei</span>
                             </td>
                             <td>
                                     <span class="badge bg-{{ $reservation->status === 'confirmed' ? 'success' : ($reservation->status === 'pending' ? 'warning' : 'danger') }} rounded-pill px-3 py-2">
@@ -148,7 +148,7 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Modal title</h5>
+                        <h5 class="modal-title">Formular Programare</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close" wire:click="closepop">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -158,9 +158,9 @@
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary" wire:click="save()">
-                            <i class="fas fa-save me-1"></i> Create Reservation
+                            <i class="fas fa-save me-1"></i> Creaza Programare
                         </button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" wire:click="closepop">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" wire:click="closepop">Inchide</button>
                     </div>
                 </div>
             </div>

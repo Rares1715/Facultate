@@ -17,7 +17,7 @@ class ReservationFactory extends Factory
      */
     public function definition(): array
     {
-        $services = ['Haircut', 'Beard Trim', 'Hair Coloring', 'Shave', 'Hair Styling', 'Full Service'];
+        $services = ['Tuns', 'Barba', 'Vopsit', 'Ras', 'Hair Styling', 'Pachet'];
         $prices = [25.00, 15.00, 50.00, 20.00, 35.00, 75.00];
         $serviceIndex = array_rand($services);
 

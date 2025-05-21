@@ -228,28 +228,28 @@
 <div class="sidebar">
     <div class="sidebar-header">
         <a href="/" class="sidebar-brand">
-            <i class="fas fa-cut"></i> Barbershop
+            <i class="fas fa-cut"></i>Capodopera
         </a>
     </div>
     <ul class="sidebar-menu">
         <li>
             <a href="/" class="{{ request()->is('/') ? 'active' : '' }}">
-                <i class="fas fa-tachometer-alt"></i> Dashboard
+                <i class="fas fa-tachometer-alt"></i> Meniu Principal
             </a>
         </li>
         <li>
             <a href="/rezervari" class="{{ request()->is('reservations*') ? 'active' : '' }}">
-                <i class="fas fa-calendar-check"></i> Reservations
+                <i class="fas fa-calendar-check"></i> Rezervari
             </a>
         </li>
         <li>
             <a href="/servicii" class="{{ request()->is('services*') ? 'active' : '' }}">
-                <i class="fas fa-list-alt"></i> Services
+                <i class="fas fa-list-alt"></i> Servicii
             </a>
         </li>
         <li>
             <a href="/clienti" class="{{ request()->is('clients*') ? 'active' : '' }}">
-                <i class="fas fa-users"></i> Clients
+                <i class="fas fa-users"></i> Clienti
             </a>
         </li>
     </ul>
@@ -262,7 +262,7 @@
             <i class="fas fa-bars"></i>
         </button>
         <div>
-            <span class="fw-bold">Welcome to Barbershop Management</span>
+            <span class="fw-bold">Bine ai venit</span>
         </div>
     </header>
 
@@ -272,7 +272,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; {{ date('Y') }} Barbershop Management System</p>
+            <p>&copy; {{ date('Y') }} Capodopera</p>
         </div>
     </footer>
 </div>

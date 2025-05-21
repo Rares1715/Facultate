@@ -39,18 +39,12 @@
                     </select>
                 </div>
                 <div class="col-md-3">
-                    <select class="form-select" id="sort-by">
+                    <select class="form-select" id="sort-by" wire:model="sortBy" wire:change="resetPagination()">
                         <option value="latest">Latest First</option>
                         <option value="oldest">Oldest First</option>
-                        <option value="price-high">Price (High to Low)</option>
-                        <option value="price-low">Price (Low to High)</option>
                     </select>
                 </div>
-                <div class="col-md-2 text-end">
-                    <button class="btn btn-outline-secondary" id="refresh-btn">
-                        <i class="fas fa-sync-alt"></i> Refresh
-                    </button>
-                </div>
+
             </div>
         </div>
         <div class="card-body p-0">

@@ -17,6 +17,7 @@ class Reservations extends Component
      */
     public $search;
     public $status;
+    public $sortBy = 'latest';
 
     public function mount(){
 
@@ -60,7 +61,15 @@ class Reservations extends Component
         }
 
 
-        $rezervari->orderBy('id','desc');
+        switch ($this->sortBy) {
+            case 'oldest':
+                $rezervari->orderBy('time', 'asc');
+                break;
+            case 'latest':
+            default:
+                $rezervari->orderBy('time', 'desc');
+                break;
+        }
         return view('livewire.reservations', [
             'rezervari' => $rezervari->paginate(7)
         ]);

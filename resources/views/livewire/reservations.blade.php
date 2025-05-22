@@ -99,20 +99,16 @@
                                         <i class="fas fa-ellipsis-v"></i>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
-                                        <li>
-                                            <a class="dropdown-item" href="#">
-                                                <i class="fas fa-eye me-2 text-primary"></i> View Details
-                                            </a>
-                                        </li>
+
                                         <li>
                                             <a class="dropdown-item" href="#"  wire:click="openpop({{ $reservation->id }})">
-                                                <i class="fas fa-edit me-2 text-info"></i> Edit
+                                                <i class="fas fa-edit me-2 text-info"></i> Editeaza
                                             </a>
                                         </li>
                                         @if($reservation->status !== 'cancelled')
                                             <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <i class="fas fa-times-circle me-2 text-danger"></i> Cancel
+                                                <a class="dropdown-item" href="#" wire:click="deletereservation({{ $reservation->id }})">
+                                                    <i class="fas fa-times-circle me-2 text-danger"></i> Sterge
                                                 </a>
                                             </li>
                                         @endif

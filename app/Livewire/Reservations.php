@@ -45,6 +45,13 @@ class Reservations extends Component
         }
         $this->popup=false;
     }
+    public function deletereservation($id){
+
+
+        $reservation = Reservation::find($id);
+        $reservation->delete();
+        session()->flash("success", "Rezervarea a fost ștearsă");
+    }
     public function closepop(){
         $this->popup=false;
     }

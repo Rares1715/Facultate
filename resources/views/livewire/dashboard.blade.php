@@ -7,7 +7,7 @@
         </div>
     </div>
 
-    <!-- Status Cards -->
+
     <div class="row mb-4">
         <div class="col-md-4">
             <div class="card bg-success text-white h-100">

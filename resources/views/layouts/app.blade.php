@@ -16,7 +16,7 @@
             overflow-x: hidden;
         }
 
-        /* Sidebar styles */
+
         .sidebar {
             position: fixed;
             top: 0;
@@ -74,7 +74,7 @@
             text-align: center;
         }
 
-        /* Main content styles */
+
         .main-wrapper {
             margin-left: 250px;
             min-height: 100vh;
@@ -85,7 +85,7 @@
             padding: 30px;
         }
 
-        /* Header styles */
+
         .main-header {
             background: white;
             padding: 15px 30px;
@@ -103,7 +103,7 @@
             color: #1a1a2e;
         }
 
-        /* Card styles */
+
         .card {
             border: none;
             border-radius: 10px;
@@ -128,7 +128,7 @@
             padding: 20px;
         }
 
-        /* Button styles */
+
         .btn {
             border-radius: 5px;
             padding: 8px 16px;
@@ -146,7 +146,7 @@
             border-color: #2a75f0;
         }
 
-        /* Table styles */
+
         .table {
             border-collapse: separate;
             border-spacing: 0;
@@ -162,14 +162,14 @@
             vertical-align: middle;
         }
 
-        /* Badge styles */
+
         .badge {
             padding: 6px 10px;
             font-weight: 500;
             border-radius: 30px;
         }
 
-        /* Avatar styles */
+
         .avatar-circle {
             width: 32px;
             height: 32px;
@@ -181,7 +181,7 @@
             font-size: 14px;
         }
 
-        /* Service icon styles */
+
         .service-icon {
             width: 40px;
             height: 40px;
@@ -192,7 +192,7 @@
             font-size: 18px;
         }
 
-        /* Footer styles */
+
         .footer {
             background-color: white;
             color: #6c757d;
@@ -202,7 +202,7 @@
             border-top: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        /* Responsive */
+
         @media (max-width: 768px) {
             .sidebar {
                 margin-left: -250px;
@@ -224,7 +224,7 @@
     @yield('styles')
 </head>
 <body>
-<!-- Sidebar -->
+
 <div class="sidebar">
     <div class="sidebar-header">
         <a href="/" class="sidebar-brand">
@@ -255,7 +255,7 @@
     </ul>
 </div>
 
-<!-- Main Content -->
+
 <div class="main-wrapper">
     <header class="main-header">
         <button class="toggle-sidebar" id="toggle-sidebar">
@@ -279,7 +279,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // Toggle sidebar on mobile
+
     document.getElementById('toggle-sidebar').addEventListener('click', function() {
         document.querySelector('.sidebar').classList.toggle('active');
         document.querySelector('.main-wrapper').classList.toggle('active');

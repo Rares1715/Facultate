@@ -16,7 +16,7 @@
     </div>
 
     <div class="row mb-4">
-        <!-- Service Category Cards -->
+
         <div class="col-md-3">
             <div class="card bg-primary text-white">
                 <div class="card-body">

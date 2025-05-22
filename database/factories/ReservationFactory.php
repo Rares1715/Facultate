@@ -11,8 +11,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class ReservationFactory extends Factory
 {
     /**
-     * Define the model's default state.
-     *
      * @return array<string, mixed>
      */
     public function definition(): array
@@ -35,8 +33,7 @@ class ReservationFactory extends Factory
     }
 
     /**
-     * Indicate that the reservation is confirmed.
-     *
+
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
     public function confirmed()
@@ -49,8 +46,7 @@ class ReservationFactory extends Factory
     }
 
     /**
-     * Indicate that the reservation is pending.
-     *
+
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
     public function pending()
@@ -63,8 +59,7 @@ class ReservationFactory extends Factory
     }
 
     /**
-     * Indicate that the reservation is cancelled.
-     *
+
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
     public function cancelled()

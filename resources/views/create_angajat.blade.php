@@ -128,7 +128,7 @@
 
 @section('scripts')
     <script>
-        // Auto-populate price based on selected service
+
         document.getElementById('service').addEventListener('change', function() {
             const selectedOption = this.options[this.selectedIndex];
             const price = selectedOption.getAttribute('data-price');
@@ -137,7 +137,7 @@
             }
         });
 
-        // Set initial price if service is pre-selected
+
         window.addEventListener('DOMContentLoaded', function() {
             const serviceSelect = document.getElementById('service');
             const selectedOption = serviceSelect.options[serviceSelect.selectedIndex];

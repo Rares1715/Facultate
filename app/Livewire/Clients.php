@@ -11,7 +11,7 @@ class Clients extends Component
 {
     use WithPagination;
 
-    protected $paginationTheme = 'bootstrap'; // Sau 'tailwind' dacă folosești Tailwind
+    protected $paginationTheme = 'bootstrap';
 
     public function render()
     {

@@ -138,7 +138,7 @@
                     <h5 class="mb-0"><i class="fas fa-chart-bar me-2"></i>Venit zilnic (luna curentă)</h5>
                 </div>
                 <div class="card-body">
-                    <canvas id="revenueChart" height="200"></canvas>
+                    <canvas id="revenueChart" height="300"></canvas>
                 </div>
             </div>
         </div>
